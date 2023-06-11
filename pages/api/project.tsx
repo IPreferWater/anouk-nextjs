@@ -6,91 +6,58 @@ import {unified} from 'unified'
 import remarkParse from 'remark-parse'
 import remarkHtml from 'remark-html'
 
-
 const projectsDirectory = path.join(process.cwd(), 'data/_projects')
-
 
 export function getAllProjectsTitleSortedByDate(): IProjectIndexLeftMenu[]{
     const res = [] as IProjectIndexLeftMenu[]
     const fileNames = fs.readdirSync(projectsDirectory)
     fileNames.forEach(fileName => {
 
-    const id = fileName.replace(/\.md$/, '')
-
     const fullPath = path.join(projectsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
         res.push({
             title: matterResult.data.title,
-            id: matterResult.data.id
+            id: getIdFromMdFileName(fileName)
         })
     })
 
     return res
 }
-  //todo by date
-export function getAllProjectsSortedByDate(): IProject[]{
-    // Get files
-  const fileNames = fs.readdirSync(projectsDirectory)
-  const res = [] as IProject[]
 
-  /*const allProjects = fileNames.map(fileName => {
-    // Remove ".md" from file name to get id
-    const id = fileName.replace(/\.md$/, '')
+export function getAllProjectsIds() {
+    const fileNames = fs.readdirSync(projectsDirectory)
+    return fileNames.map(fileName => {
+      return {
+        params: {
+          id: getIdFromMdFileName(fileName)
+        }
+      }
+    })
+  }
 
-    // Read markdown file as string
-    const fullPath = path.join(projectsDirectory, fileName)
+  export async function getProjectByID(id:string): Promise<IProject> {
+    const fullPath = path.join(projectsDirectory, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-
-    // Use gray-matter to parse the post metadata section
     const matterResult = matter(fileContents)
 
-    const date = matterResult.data.date
-    console.log()
     const parsed = await unified()
     .use(remarkParse)
     .use(remarkHtml)
     .process(matterResult.content)
-
-    //set the html instead of the markdown
     const content = String(parsed)
 
-    res.push({
-        title: matterResult.data.title,
-        date: matterResult.data.date,
+    const data = matterResult.data
+
+    return {
+        id: id,
+        title: data.title,
+        date: data.date,
         body: content
-    })
-  })
-  console.log(res)*/
-
-  return res
-
-}
-
-/*export function getPlanningByID(id:String): IPlanning{
-    const fullPath = path.join(planningsDirectory, `${id}.json`)
-    const planningString = fs.readFileSync(fullPath, 'utf8')
-    const planing: IPlanning = JSON.parse(planningString);
-    return planing
-}*/
-
-/*function getPlanningNameByID(id:String){
-
-    const arr = id.split("_", 2)
-    const monthStr = arr[1]
-    const monthNumber = parseInt(monthStr)
-    const monthLabel = getMonthLabelFromInt(monthNumber)
-
-    return `${monthLabel} - ${arr[0]}`
-}*/
-
-const arrMonthsString = ["","janvier","février","mars","avril","mai","juin","juillet","aout","septembre","octobre","novembre","décembre"]
-
-export function getMonthLabelFromInt(month:number){
-    return arrMonthsString[month]
-}
-
-export function getLabelDay(year:string, month:string, day:string) {
-    var date = new Date(`${year}/${month}/${day}`);
-    return date.toLocaleDateString("fr-FR", { weekday: 'long' });
+    } as IProject
   }
+
+  function getIdFromMdFileName(fileName:String):string{
+    return fileName.replace(/\.md$/, '')
+  }
+

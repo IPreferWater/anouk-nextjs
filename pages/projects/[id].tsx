@@ -1,34 +1,37 @@
+import { getAllProjectsIds, getProjectByID } from '@/api/project'
 import {Layout} from '../../components/Layout'
+import {unified} from 'unified'
+import remarkParse from 'remark-parse'
+import remarkHtml from 'remark-html'
+import { IProject } from '@/interfaces/index'
 
 
-type PlanningProps = {
-    planning: string,
-    id: string
+type ProjectProps = {
+    project: IProject
 }
-export default function PlanningsPage({planning, id}:PlanningProps) {
-    return (<Layout title="Clementinestla planning" metaName = "Planning" metaDescription="Planning, horaires et disponibilité des differents creneaux horaires à l'atelier de Clementinestla">
+export default function ProjectPage({project}:ProjectProps) {
+    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury">
 
+<div className='prose prose-xl mx-auto prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 prose:text-center' dangerouslySetInnerHTML={{__html:project.body}}/>
+        {project.title} - {project.date}
     </Layout>)
 }
 
-/*export async function getStaticProps(context:any){
-    const planning = getPlanningByID(context.params.id)
-    const id = context.params.id
-    return {
-        props: {
-            planning,
-            id
-        }
-    }
-}*/
+//TODO typeof ?
+export async function getStaticProps(params:any) {
+      const project = await getProjectByID(params.params.id)
 
-/*export async function getStaticPaths(){
-    let paths = await getAllPlannings()
-    const paramsPaths = paths.map(planning => ({
-        params: { id:planning.id, title:planning.title }
-    }));
-    return {
-        paths: paramsPaths,
-        fallback: false
+      return {
+        props: {
+          project
+        }
+      }
     }
-}*/
+
+export async function getStaticPaths() {
+  const paths = getAllProjectsIds()
+  return {
+    paths,
+    fallback: false
+  }
+}

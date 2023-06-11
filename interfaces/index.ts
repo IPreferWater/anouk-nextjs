@@ -4,6 +4,7 @@ export type IProjectIndexLeftMenu = {
 }
 
 export type IProject = {
+  id: string
   title: string
   date: string
   body: string

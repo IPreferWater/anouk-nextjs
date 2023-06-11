@@ -14,7 +14,7 @@ type IndexProps = {
 <div>
   <h1>projets</h1>
 {projects.map(({ title, id}) => (
-            <Link  key={title} href={`/blog/${title}`}>
+            <Link  key={id} href={`/projects/${id}`}>
              <p> {title}</p>
           </Link>
 
