@@ -78,10 +78,10 @@ export const Layout = ({ children, title, metaName, metaDescription}: Props) => 
         </div>
         
 
-      <nav className='flex flex-col text-5xl md:flex-row md:text-2xl md:items-end md:justify-between md:mx-8 md:space-x-6'>
+      <nav className='font-courier flex flex-col text-5xl md:flex-row md:text-2xl md:items-end md:justify-between md:mx-8 md:space-x-6'>
       {navigationUrls.map(({title, url}: any) => {
            return <Link key={title} href={url} className='underline decoration-cel-orange decoration-2'>
-           {title}
+           {title} aaaa
          </Link>
         })
         }

@@ -12,10 +12,10 @@ type IndexProps = {
   return (<Layout title="Anouk Desury photographe Roubaix" metaName = "Acceuil" metaDescription="Page d'acceuil d' Anouk Desury photgraphe Roubaix">
 
 <div>
-  <h1>projets</h1>
+  <h1 className='font-adirek'>projets</h1>
 {projects.map(({ title, id}) => (
             <Link  key={id} href={`/projects/${id}`}>
-             <p> {title}</p>
+             <p className='font-adirek'> {title}</p>
           </Link>
 
     )) }

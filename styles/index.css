@@ -8,17 +8,17 @@
 @tailwind components;
 @tailwind utilities;
 
-/*@font-face {
-  font-family: "marker";
-  src: url("fonts/PermanentMarker-Regular.ttf");
+@font-face {
+  font-family: "courier-prime";
+  src: url("fonts/CourierPrime-Regular.ttf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-}*/
+}
 
 @font-face {
-  font-family: "domine";
-  src: url("fonts/Domine.ttf");
+  font-family: "adirek";
+  src: url("fonts/AdirekSansDemoThin.otf");
   font-style: normal;
   font-weight: 400;
   font-display: swap;
