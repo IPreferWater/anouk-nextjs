@@ -1,6 +1,8 @@
 import React, { ReactNode } from 'react'
 import Link from 'next/link'
 import Head from 'next/head'
+import {LeftMenu} from '@/components/LeftMenu'
+import {SmMenu} from '@/components/SmMenu'
 import 'tailwindcss/tailwind.css'
 
 type Props = {
@@ -12,45 +14,6 @@ type Props = {
 
 export const Layout = ({ children, title, metaName, metaDescription}: Props) => {
 
-  const navigationUrls = [
-    {
-      title:'Cours et ateliers',
-      url:'/cours'
-    },
-    {
-      title:'Tarifs réparations',
-      url:'/tarifs'
-    },
-    {
-      title:'Les créations upcyclées',
-      url:'/creations'
-    },
-    {
-      title:'Le projet',
-      url:'/comingsoon'
-    }
-    ,
-    {
-      title:'FAQ',
-      url:'/faq'
-    }
-  ]
-
-  const navigationSocialNetwork = [
-    {
-      id:'facebook',
-      url : 'https://www.facebook.com/Clementinestla'
-    },
-    {
-      id:'instagram',
-      url: 'https://l.messenger.com/l.php?u=https%3A%2F%2Fwww.instagram.com%2Fclementinestla%2F%3Fhl%3Dfr&h=AT14p2Xfzw9I8Y4Z2OKvwhHa4Oy8zcqNdCOjDL9ugUPX0yV8zJ0eqCUM2iJlQZZVR8LOOv1inSnCeR0VSHoqf5ZCr6gp0dAufB0Woi8VgHgYpA0yagvFf-0FVu9WiN6jdZgmsQ'
-    },
-    {
-      id:'youtube',
-      url : 'https://www.youtube.com/channel/UC-4tD0SeN4wTyoDqQ4VkYBQ'
-    }
-  ]
-
   return <div>
     <Head>
       <title>{title}</title>
@@ -60,34 +23,21 @@ export const Layout = ({ children, title, metaName, metaDescription}: Props) => 
     <header className='mb-4'>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name={metaName} content={metaDescription}/>
-      <div className='flex justify-between items-center'>
-      <Link href="/">
-          <img className='object-contain h-40 p-4' src="/logo.svg" alt="logo de la page d'index"/>
+    <div className='flex flex-row justify-between'>
+      <Link className='text-5xl font-courier' href="/">
+          Anouk Desury
         </Link>
-
-        <div className='flex flex-row'>
-        {navigationSocialNetwork.map(({id,url}: any) => {
-           return <Link key={id} href={url} target='_blank'>
-            <img className='object-contain h-16' src={`/icon_${id}.svg`} alt={`icon reseau social ${id}`} />
-          </Link>
-         
-        })
-        }
-        </div>
-
-        </div>
-        
-
-      <nav className='font-courier flex flex-col text-5xl md:flex-row md:text-2xl md:items-end md:justify-between md:mx-8 md:space-x-6'>
-      {navigationUrls.map(({title, url}: any) => {
-           return <Link key={title} href={url} className='underline decoration-cel-orange decoration-2'>
-           {title} aaaa
-         </Link>
-        })
-        }
-       
-      </nav>
+        <div className='visible md:invisible'><SmMenu/></div>
+    </div>
     </header>
+
+    <div className='invisible md:visible flex flex-row'>
+      <div className='bg-blue-200 w-1/5'><LeftMenu/></div>
+      <div className='bg-red-300'>{children}</div>
+    </div>
+
+    <div className='visible md:invisible bg-red-300'>
     {children}
+    </div>
   </div>
 }
