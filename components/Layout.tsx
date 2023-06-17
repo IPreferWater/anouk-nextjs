@@ -4,15 +4,17 @@ import Head from 'next/head'
 import {LeftMenu} from '@/components/LeftMenu'
 import {SmMenu} from '@/components/SmMenu'
 import 'tailwindcss/tailwind.css'
+import { IProjectIndexLeftMenu } from '../interfaces'
 
 type Props = {
   children?: ReactNode
   title: string
   metaName: string,
-  metaDescription: string
+  metaDescription: string,
+  projects: Array<IProjectIndexLeftMenu>
 }
 
-export const Layout = ({ children, title, metaName, metaDescription}: Props) => {
+export const Layout = ({ children, title, metaName, metaDescription, projects}: Props) => {
 
   return <div>
     <Head>
@@ -27,13 +29,13 @@ export const Layout = ({ children, title, metaName, metaDescription}: Props) => 
       <Link className='text-5xl font-courier' href="/">
           Anouk Desury
         </Link>
-        <div className='bg-red-300 block md:hidden'><SmMenu/></div>
+        <div className='bg-red-300 block md:hidden'><SmMenu projects={projects}/></div>
     </div>
     </header>
 
-    <div className='hidden md:block flex flex-row'>
-      <div className='bg-blue-200 w-1/5'><LeftMenu/></div>
-      <div className='bg-red-300'>{children}</div>
+    <div className='hidden md:flex flex-row'>
+      <div className='bg-blue-200 w-1/5'><LeftMenu projects={projects}/></div>
+      <div className='bg-red-300 w-full'>{children}</div>
     </div>
 
     <div className='block md:hidden bg-red-300'>

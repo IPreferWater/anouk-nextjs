@@ -1,23 +1,22 @@
 import React from 'react'
+import { IProjectIndexLeftMenu } from '../interfaces'
+import Link from 'next/link'
 
+type LeftMenuProps = {
+  projects: IProjectIndexLeftMenu[]
+  }
 
-/*type ItemProps = {
-  // WARNING the title is used as a key, it need to be unique
-  title?: string
-  txts?: Array<string>
-  img?: string
-  }*/
+export const LeftMenu = ( {projects} :LeftMenuProps) => {
 
-export const LeftMenu = ( /*{title, txts, img} : ItemProps*/) => {
-
-const links = ["blablabla","hahahaa"]
 return <div className='flex flex-col gap-y-4'>
   
-  {//render sentences if defined
- links.map((str: string,i: number) => {
-  return <p className='text-slate-700' key={i}>{str}</p>
-}) 
-}
+  <h1 className='underline'>Projets</h1>
+  {projects.map(({ title, id}) => (
+            <Link  key={id} href={`/projects/${id}`}>
+             <p className='font-courier'> {title}</p>
+          </Link>
+
+    )) }
   
 </div>
 }

@@ -2,19 +2,16 @@ import React, { useState } from 'react'
 import { Fragment } from 'react'
 
 import { Menu, Transition } from '@headlessui/react'
+import { IProjectIndexLeftMenu } from '../interfaces'
+import Link from 'next/link'
 
 
-/*type ItemProps = {
-  // WARNING the title is used as a key, it need to be unique
-  title?: string
-  txts?: Array<string>
-  img?: string
-  }*/
+type SmMenuProps = {
+  projects: Array<IProjectIndexLeftMenu>
+  }
 
-export const SmMenu = ( /*{title, txts, img} : ItemProps*/) => {
+export const SmMenu = ( {projects} :SmMenuProps) => {
 
-  const [stateIsCollapse, setstateIsCollapse] = useState(true);
-const links = ["blablabla","hahahaa"]
 return <div>
 
 
@@ -22,7 +19,7 @@ return <div>
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           
-          <div>XXX</div>
+          <div>🦉</div>
         </Menu.Button>
       </div>
 
@@ -38,17 +35,15 @@ return <div>
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="py-1">
           {
- links.map((str: string,i: number) => {
-  return            <Menu.Item key={`${i}-${str}`}>
+ projects.map((project: IProjectIndexLeftMenu,i: number) => {
+  return            <Menu.Item key={`${i}-${project.id}`}>
   {({ active }) => (
-    <a
-      href="#"
-      
-      className={`block px-4 py-2 text-sm {${active ? "bg-gray-100 text-gray-900" : "text-gray-700"}`}
-
-    >
-      {str}
-    </a>
+    
+    <Link
+    href={`/projects/${project.id}`}
+    className={`block px-4 py-2 text-sm {${active ? "bg-gray-100 text-gray-900" : "text-gray-700"}`}>
+      {project.title}
+    </Link>
   )}
 </Menu.Item>
 

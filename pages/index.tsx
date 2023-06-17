@@ -9,16 +9,10 @@ type IndexProps = {
 
   export default function IndexPage({ projects } : IndexProps) {
 
-  return (<Layout title="Anouk Desury photographe Roubaix" metaName = "Acceuil" metaDescription="Page d'acceuil d' Anouk Desury photgraphe Roubaix">
+  return (<Layout title="Anouk Desury photographe Roubaix" metaName = "Acceuil" metaDescription="Page d'acceuil d' Anouk Desury photgraphe Roubaix" projects={projects}>
 
 <div>
-  <h1 className='font-courier underline'>projets</h1>
-{projects.map(({ title, id}) => (
-            <Link  key={id} href={`/projects/${id}`}>
-             <p className='font-courier'> {title}</p>
-          </Link>
-
-    )) }
+  <h1 className='font-courier underline'>TODO photo anouck</h1>
 </div>
   </Layout>)
 }

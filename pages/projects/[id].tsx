@@ -1,17 +1,18 @@
-import { getAllProjectsIds, getProjectByID } from '@/api/project'
+import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID } from '@/api/project'
 import {Layout} from '../../components/Layout'
 import {unified} from 'unified'
 import remarkParse from 'remark-parse'
 import remarkHtml from 'remark-html'
-import { IProject } from '@/interfaces/index'
+import { IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
 
 
 type ProjectProps = {
     project: IProject
+    allProjects: IProjectIndexLeftMenu[]
 }
-export default function ProjectPage({project}:ProjectProps) {
+export default function ProjectPage({project, allProjects}:ProjectProps) {
   
-    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury">
+    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects}>
 
 
         {project.title} - {project.date}
@@ -35,10 +36,12 @@ export default function ProjectPage({project}:ProjectProps) {
 //TODO typeof ?
 export async function getStaticProps(params:any) {
       const project = await getProjectByID(params.params.id)
+      const allProjects = getAllProjectsTitleSortedByDate() as IProjectIndexLeftMenu[]
     console.log(project)
       return {
         props: {
-          project
+          project,
+          allProjects
         }
       }
     }
