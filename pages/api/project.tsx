@@ -7,6 +7,7 @@ import remarkParse from 'remark-parse'
 import remarkHtml from 'remark-html'
 
 const projectsDirectory = path.join(process.cwd(), 'data/_projects')
+const projectsImgsDirectory = path.join(process.cwd(), 'public/projects')
 
 export function getAllProjectsTitleSortedByDate(): IProjectIndexLeftMenu[]{
     const res = [] as IProjectIndexLeftMenu[]
@@ -49,11 +50,22 @@ export function getAllProjectsIds() {
 
     const data = matterResult.data
 
+    //load imgs urls
+    const fullPathImgs = path.join(projectsImgsDirectory, `${id}`)
+    //const fileImgsContents = fs.readFileSync(fullPath, 'utf8')
+
+    const fileNames = fs.readdirSync(fullPathImgs)
+    console.log(fileNames)
+    //TODO this is only for local test
+    //var filtered = fileNames.filter(function (f) { return f.endsWith("Zone.Identifier"); });
+
+    //console.log(filtered)
     return {
         id: id,
         title: data.title,
         date: data.date,
-        body: content
+        body: content,
+        imgs: fileNames
     } as IProject
   }
 

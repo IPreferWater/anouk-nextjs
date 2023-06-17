@@ -8,4 +8,5 @@ export type IProject = {
   title: string
   date: string
   body: string
+  imgs: Array<string>
 }

@@ -27,16 +27,16 @@ export const Layout = ({ children, title, metaName, metaDescription}: Props) => 
       <Link className='text-5xl font-courier' href="/">
           Anouk Desury
         </Link>
-        <div className='visible md:invisible'><SmMenu/></div>
+        <div className='bg-red-300 block md:hidden'><SmMenu/></div>
     </div>
     </header>
 
-    <div className='invisible md:visible flex flex-row'>
+    <div className='hidden md:block flex flex-row'>
       <div className='bg-blue-200 w-1/5'><LeftMenu/></div>
       <div className='bg-red-300'>{children}</div>
     </div>
 
-    <div className='visible md:invisible bg-red-300'>
+    <div className='block md:hidden bg-red-300'>
     {children}
     </div>
   </div>
