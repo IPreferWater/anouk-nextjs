@@ -1,8 +1,5 @@
 import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID } from '@/api/project'
 import {Layout} from '../../components/Layout'
-import {unified} from 'unified'
-import remarkParse from 'remark-parse'
-import remarkHtml from 'remark-html'
 import { IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
 
 

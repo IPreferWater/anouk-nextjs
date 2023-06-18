@@ -12,7 +12,9 @@ type IndexProps = {
   return (<Layout title="Anouk Desury photographe Roubaix" metaName = "Acceuil" metaDescription="Page d'acceuil d' Anouk Desury photgraphe Roubaix" projects={projects}>
 
 <div>
-  <h1 className='font-courier underline'>TODO photo anouck</h1>
+  <img className='hidden md:flex' src='/index/index_anouck_desury.jpg' alt='photo de profil d Anouck Desury' />
+  <img className='flex md:hidden' src='/index/index_anouck_desury_sm.jpg' alt='photo de profil d Anouck Desury' />
+
 </div>
   </Layout>)
 }
