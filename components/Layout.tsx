@@ -29,16 +29,16 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
       <Link className='text-5xl font-courier' href="/">
           Anouk Desury
         </Link>
-        <div className='bg-red-300 block md:hidden'><SmMenu projects={projects}/></div>
+        <div className='block md:hidden'><SmMenu projects={projects}/></div>
     </div>
     </header>
 
     <div className='hidden md:flex flex-row'>
-      <div className='bg-blue-200 w-1/5'><LeftMenu projects={projects}/></div>
-      <div className='bg-red-300 w-full'>{children}</div>
+      <div className='w-1/5'><LeftMenu projects={projects}/></div>
+      <div className='w-full'>{children}</div>
     </div>
 
-    <div className='block md:hidden bg-red-300'>
+    <div className='block md:hidden'>
     {children}
     </div>
   </div>

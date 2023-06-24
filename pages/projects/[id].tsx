@@ -15,15 +15,14 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
         {project.title} - {project.date}
 
         <div className='flex flex-col md:flex-row'>
-        <div className='prose prose-xl mx-auto prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 prose:text-center' dangerouslySetInnerHTML={{__html:project.body}}/>
+        <div className='bg-red-300 max-h-screen w-96 prose prose-xl prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 prose:text-center' dangerouslySetInnerHTML={{__html:project.body}}/>
 
         {project.imgs.map(url => (
              <img
              key = {url}
              src= {`/projects/${project.id}/${url}`}
-             className=""
+             className="max-w-6xl max-h-screen"
              alt="Wild Landscape"
-             /*onClick={(e) => moveCarrousel(e, +1)}*/
            />
     )) }
         </div>
