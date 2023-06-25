@@ -55,7 +55,6 @@ export function getAllProjectsIds() {
     //const fileImgsContents = fs.readFileSync(fullPath, 'utf8')
 
     const fileNames = fs.readdirSync(fullPathImgs)
-    console.log(fileNames)
     //TODO this is only for local test
     //var filtered = fileNames.filter(function (f) { return f.endsWith("Zone.Identifier"); });
 

@@ -8,7 +8,7 @@ type LeftMenuProps = {
 
 export const LeftMenu = ( {projects} :LeftMenuProps) => {
 
-return <div className='flex flex-col gap-y-4 font-courier'>
+return <div className='flex flex-col gap-y-4 font-courier p-4'>
   
   <h1 className='underline'>Projets</h1>
   {projects.map(({ title, id}) => (
