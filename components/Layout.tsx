@@ -26,7 +26,7 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name={metaName} content={metaDescription}/>
     <div className='flex flex-row justify-between'>
-      <Link className='text-5xl font-courier' href="/">
+      <Link className='m-6 font-courier' href="/">
           Anouk Desury
         </Link>
         <div className='block md:hidden'><SmMenu projects={projects}/></div>

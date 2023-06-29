@@ -15,11 +15,11 @@ export const SmMenu = ( {projects} :SmMenuProps) => {
 return <div>
 
 
-<Menu as="div" className="relative inline-block text-left">
+<Menu as="div" className="relative inline-block text-left font-courier">
       <div>
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
           
-          <div>🦉</div>
+        <img className='object-contain h-10' src="/icon_menu_sm.svg" alt="icon pour menu sur smartphone"/>
         </Menu.Button>
       </div>
 
@@ -34,7 +34,7 @@ return <div>
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none p-2">
           <div className="py-1">
-            <h2>Projets</h2>
+            <h2 className='font-bold'>Projets</h2>
           {
  projects.map((project: IProjectIndexLeftMenu,i: number) => {
   return            <Menu.Item key={`${i}-${project.id}`}>
@@ -61,7 +61,7 @@ return <div>
 
           <Link
     href={`/contact`}
-    className={``}>
+    className='font-bold'>
       Contact
     </Link>
 
