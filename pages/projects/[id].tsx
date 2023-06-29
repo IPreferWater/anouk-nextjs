@@ -11,13 +11,7 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
   
     return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects}>
 
-        <div className='flex flex-row items-center mb-8 font-courier'>
-          <div className='text-2xl bold'>{project.title}</div>
-          <div className='px-4'>-</div>
-          <div>{project.date}</div>
-          
-        </div>
-
+          <div className='mb-8 font-courier text-[25px] bold ml-6 md:ml-0'>{project.title}</div>        
         <div className='flex flex-col md:flex-row'>
           {<div>
         <div className=' m-auto md:mx-2 w-96 prose prose-xl font-courier prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 text-justify prose:font-courier' dangerouslySetInnerHTML={{__html:project.body}}/>
