@@ -19,5 +19,17 @@ X bouton du menu on peut mettre un logo  trois ligne
 X tailles de typo menu xcomme https://kilito.com/
 -note- fontsize 13.5 px line-height 20
 
+TODO
 la page "contact" est vide
 alternative font Adirek
+favorite icon
+
+
+X taille des images
+
+screen menu absolute 0-0
+ml-16
+
+sticky title only for screen
+courier-prime add font level
+

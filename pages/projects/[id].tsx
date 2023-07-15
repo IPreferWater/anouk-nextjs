@@ -11,10 +11,10 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
   
     return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects}>
 
-          <div className='mb-8 font-courier text-[25px] bold ml-6 md:ml-0'>{project.title}</div>        
+          <div className='text-center mb-8  font-courier text-[25px] bold '>{project.title}</div>        
         <div className='flex flex-col md:flex-row'>
           {<div>
-        <div className=' m-auto md:mx-2 w-96 prose prose-xl font-courier prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 text-justify prose:font-courier' dangerouslySetInnerHTML={{__html:project.body}}/>
+        <div className='text-[13.5px] m-auto md:mx-2 w-80 prose prose-xl font-courier prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 text-justify prose:font-courier' dangerouslySetInnerHTML={{__html:project.body}}/>
           </div>}
 
         
@@ -24,7 +24,7 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
              <img
              key = {url}
              src= {`/projects/${project.id}/${url}`}
-             className=" my-2 md:mx-2 md:my-0"
+             className=" my-4 md:mx-2 md:my-0"
              alt="Wild Landscape"
            />
           
