@@ -11,7 +11,7 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
   
     return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects}>
 
-          <div className='text-center mb-8  font-courier text-[25px] bold '>{project.title}</div>        
+          <div className='text-center font-courier text-[25px] bold'>{project.title}</div>        
         <div className='flex flex-col md:flex-row'>
           {<div>
         <div className='text-[13.5px] m-auto md:mx-2 w-80 prose prose-xl font-courier prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 text-justify prose:font-courier' dangerouslySetInnerHTML={{__html:project.body}}/>
