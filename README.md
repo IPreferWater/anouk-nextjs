@@ -27,7 +27,7 @@ favorite icon
 
 X taille des images
 
-screen menu absolute 0-0
+X screen menu absolute 0-0
 ml-16
 
 sticky title only for screen

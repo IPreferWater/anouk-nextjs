@@ -29,17 +29,17 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
       <Link className='m-6 font-courier text-[30px]' href="/">
           Anouk Desury
         </Link>
-        <div className='block md:hidden'><SmMenu projects={projects}/></div>
+        <div className='block lg:hidden'><SmMenu projects={projects}/></div>
     </div>
     </header>
 
-    <div className='hidden md:flex flex-row'>
+    <div className='hidden lg:flex flex-row'>
       <div className='w-1/5 mr-8 fixed bg-white h-screen'><LeftMenu projects={projects}/></div>
       <div className='w-2/5'></div>
       <div>{children}</div>
     </div>
 
-    <div className='block md:hidden'>
+    <div className='block lg:hidden'>
     {children}
     </div>
   </div>
