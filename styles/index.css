@@ -10,3 +10,12 @@
   font-weight: 400;
   font-display: swap;
 }
+
+
+@font-face {
+  font-family: "skeina";
+  src: url("fonts/Skeina.otf");
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+}

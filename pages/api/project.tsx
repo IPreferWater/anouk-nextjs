@@ -40,6 +40,7 @@ export function getAllProjectsIds() {
   export async function getProjectByID(id:string): Promise<IProject> {
     const fullPath = path.join(projectsDirectory, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
+    console.log(fileContents)
     const matterResult = matter(fileContents)
 
     const parsed = await unified()

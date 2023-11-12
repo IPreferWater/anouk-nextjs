@@ -6,7 +6,7 @@ module.exports = {
   theme: {
     fontFamily: {
       courier: ['courier-prime'],
-      adirek: ['adirek',]
+      skeina: ['skeina'],
     },
     fontSize: {
       menu: ['13.5px','20px']

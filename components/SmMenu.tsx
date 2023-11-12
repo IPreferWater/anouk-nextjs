@@ -17,8 +17,8 @@ return <div>
 
 <Menu as="div" className="relative inline-block text-left font-courier">
       <div>
-        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
-          
+        <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold shadow-sm   hover:bg-gray-50">
+
         <img className='object-contain h-10' src="/icon_menu_sm.svg" alt="icon pour menu sur smartphone"/>
         </Menu.Button>
       </div>
@@ -39,7 +39,7 @@ return <div>
  projects.map((project: IProjectIndexLeftMenu,i: number) => {
   return            <Menu.Item key={`${i}-${project.id}`}>
   {({ active }) => (
-    
+
     <Link
     href={`/projects/${project.id}`}
     className={`block px-4 py-2 text-sm {${active ? "bg-gray-100 text-gray-900" : "text-gray-700"}`}>
@@ -56,7 +56,7 @@ return <div>
 
 })}
 
-            
+
           </div>
 
           <Link
@@ -68,7 +68,7 @@ return <div>
         </Menu.Items>
       </Transition>
     </Menu>
-  
+
 
 </div>
 }
