@@ -1,5 +1,5 @@
 ---
-title: Ce soir je prendrai soin de moi
+title: Ce soir, je prendrai soin de moi
 date: '2022-05-01'
 ---
 Patience, Arielle, Souad, Betty, Alice, Cecilia. Six femmes qui ont refusé une réalité

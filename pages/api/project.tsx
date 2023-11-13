@@ -40,7 +40,6 @@ export function getAllProjectsIds() {
   export async function getProjectByID(id:string): Promise<IProject> {
     const fullPath = path.join(projectsDirectory, `${id}.md`)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
-    console.log(fileContents)
     const matterResult = matter(fileContents)
 
     const parsed = await unified()
@@ -48,18 +47,11 @@ export function getAllProjectsIds() {
     .use(remarkHtml)
     .process(matterResult.content)
     const content = String(parsed)
-
     const data = matterResult.data
-
-    //load imgs urls
     const fullPathImgs = path.join(projectsImgsDirectory, `${id}`)
-    //const fileImgsContents = fs.readFileSync(fullPath, 'utf8')
 
     const fileNames = fs.readdirSync(fullPathImgs)
-    //TODO this is only for local test
-    //var filtered = fileNames.filter(function (f) { return f.endsWith("Zone.Identifier"); });
 
-    //console.log(filtered)
     return {
         id: id,
         title: data.title,

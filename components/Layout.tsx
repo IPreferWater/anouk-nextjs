@@ -33,14 +33,16 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
     </div>
     </header>
 
-    <div className='hidden lg:flex flex-row'>
-      <div className='w-1/5 mr-8 fixed bg-white h-screen'><LeftMenu projects={projects}/></div>
-      <div className='w-2/5'></div>
-      <div>{children}</div>
-    </div>
-
     <div className='block lg:hidden'>
     {children}
     </div>
+
+    <div className='hidden lg:flex flex-row'>
+      <div className='w-1/5 mr-8 fixed bg-white h-screen'><LeftMenu projects={projects}/></div>
+      <div className='w-1/5'></div>
+      <div>{children}</div>
+    </div>
+
+
   </div>
 }

@@ -1,5 +1,5 @@
 ---
-title: Les poings ouverts site Light Motiv 1920
+title: Les poings ouverts
 date: '2022-05-01'
 ---
 À l’hôpital, une grande partie des entrées de patients se fait la nuit.
