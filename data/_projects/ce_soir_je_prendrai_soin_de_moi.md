@@ -1,6 +1,6 @@
 ---
 title: Ce soir, je prendrai soin de moi
-date: '2022-05-01'
+date: '2020-07-01'
 ---
 Patience, Arielle, Souad, Betty, Alice, Cecilia. Six femmes qui ont refusé une réalité
 ou une fatalité destructrice, souvent devenue ordinaire. Ces images racontent le

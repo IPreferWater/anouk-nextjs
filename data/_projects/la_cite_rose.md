@@ -1,6 +1,6 @@
 ---
 title: La cité rose
-date: '2022-05-01'
+date: '2020-02-01'
 ---
 La cité rose, aussi nommée Guinguette ou Barbe d'or est une résidence construite il y a plus de 40 ans dans
 le quartier de l'Alma. Il y règne une solidarité entre voisins, dans la joie comme dans les épreuves. Depuis

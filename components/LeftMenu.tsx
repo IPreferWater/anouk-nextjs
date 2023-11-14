@@ -28,8 +28,8 @@ return <div className='flex flex-col gap-y-4 font-courier ml-16 text-menu'>
     )) : null}
 
 
-    <Link href={`/contact`} className='font-bold'>
-      CONTACT
+    <Link href={`/apropos`} className='font-bold'>
+      A PROPOS
     </Link>
   </div>
 

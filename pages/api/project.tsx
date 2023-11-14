@@ -1,29 +1,34 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
+import { IImg, IProject, IProjectIndexLeftMenu, ITemp } from '@/interfaces/index'
 import {unified} from 'unified'
 import remarkParse from 'remark-parse'
 import remarkHtml from 'remark-html'
 
 const projectsDirectory = path.join(process.cwd(), 'data/_projects')
 const projectsImgsDirectory = path.join(process.cwd(), 'public/projects')
+const SEPARATOR = "_"
 
 export function getAllProjectsTitleSortedByDate(): IProjectIndexLeftMenu[]{
-    const res = [] as IProjectIndexLeftMenu[]
+    const temp = [] as ITemp[]
     const fileNames = fs.readdirSync(projectsDirectory)
+
+
     fileNames.forEach(fileName => {
 
     const fullPath = path.join(projectsDirectory, fileName)
     const fileContents = fs.readFileSync(fullPath, 'utf8')
     const matterResult = matter(fileContents)
-        res.push({
+        temp.push({
             title: matterResult.data.title,
-            id: getIdFromMdFileName(fileName)
+            id: getIdFromMdFileName(fileName),
+            date: new Date(matterResult.data.date)
         })
     })
 
-    return res
+  const sorted = temp.sort((objA, objB) => objB.date.getTime() - objA.date.getTime());
+  return sorted.map(({ title, id }) => ({ title, id }));
 }
 
 export function getAllProjectsIds() {
@@ -57,11 +62,33 @@ export function getAllProjectsIds() {
         title: data.title,
         date: data.date,
         body: content,
-        imgs: fileNames
+        imgs: fileNamesToImg(fileNames)
     } as IProject
   }
 
   function getIdFromMdFileName(fileName:String):string{
     return fileName.replace(/\.md$/, '')
+  }
+
+  function fileNamesToImg(fileNames:Array<string>): Array<IImg>{
+
+    const maped =  fileNames.map((fileName => {
+      const defaultImg = {alt:fileName,path:fileName,order:0}
+      const indexSeparator = fileName.indexOf(SEPARATOR);
+      // can't find separator
+      if (indexSeparator <0) {
+        return defaultImg
+      }
+
+      const alt = fileName.substring(0, indexSeparator)
+      const orderString = fileName.substring(indexSeparator+1, fileName.length-5)
+      const order = parseInt(orderString)
+      console.log("index {} alt {} orderstr {} order {}",indexSeparator, alt, orderString, order)
+      defaultImg.alt = alt
+      defaultImg.order = order
+      return defaultImg
+    }))
+
+    return maped.sort((objA, objB) => objA.order - objB.order);
   }
 

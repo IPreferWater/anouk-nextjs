@@ -3,10 +3,21 @@ export type IProjectIndexLeftMenu = {
   id: string
 }
 
+export type ITemp = {
+  title: string
+  id: string
+  date: Date
+}
+
 export type IProject = {
   id: string
   title: string
-  date: string
   body: string
-  imgs: Array<string>
+  imgs: Array<IImg>
+}
+
+export type IImg = {
+  alt: string
+  path: string
+  order : number
 }

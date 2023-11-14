@@ -1,6 +1,6 @@
 ---
 title: Le songe d'une nuit de confinement
-date: '2022-05-01'
+date: '2020-04-01'
 ---
 À l’hôpital, une grande partie des entrées de patients se fait la nuit.
 Le soleil est couché, la lumière a disparu, c'est un moment très anxiogène

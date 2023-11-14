@@ -17,13 +17,13 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
         <div className='text-[13.5px] m-auto lg:pl-[300px] w-[500px] lg:mr-2 prose prose-xl font-courier prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 text-left prose:font-courier' dangerouslySetInnerHTML={{__html:project.body}}/>
           </div>}
 
-        {project.imgs.map(url => (
+        {project.imgs.map(img => (
 
              <img
-             key = {url}
-             src= {`/projects/${project.id}/${url}`}
+             key = {img.path}
+             src= {`/projects/${project.id}/${img.path}`}
              className="max-h-[600px] my-4 lg:mx-2 lg:my-0 "
-             alt="photo Anouk Desury"
+             alt={img.alt}
            />
 
         )) }
