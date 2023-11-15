@@ -83,7 +83,6 @@ export function getAllProjectsIds() {
       const alt = fileName.substring(0, indexSeparator)
       const orderString = fileName.substring(indexSeparator+1, fileName.length-5)
       const order = parseInt(orderString)
-      console.log("index {} alt {} orderstr {} order {}",indexSeparator, alt, orderString, order)
       defaultImg.alt = alt
       defaultImg.order = order
       return defaultImg

@@ -26,8 +26,8 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name={metaName} content={metaDescription}/>
     <div className='flex flex-row justify-between'>
-      <Link className='m-6 ml-16 lg:mb-16 font-skeina text-[30px]' href="/">
-          <div className='lg:fixed'>Anouk Desury</div>
+      <Link className='m-6 ml-16  font-skeina text-[30px]' href="/">
+          <div className=''>Anouk Desury</div>
         </Link>
         <div className='block lg:hidden'><SmMenu projects={projects}/></div>
     </div>
@@ -38,9 +38,8 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
     </div>
 
     <div className='hidden lg:flex flex-row'>
-      <div className='w-1/5 mr-8 fixed bg-white h-screen'><LeftMenu projects={projects}/></div>
-      <div className='w-1/5'></div>
-      <div>{children}</div>
+      <LeftMenu projects={projects}/>
+      <div className='ml-6'>{children}</div>
     </div>
 
 

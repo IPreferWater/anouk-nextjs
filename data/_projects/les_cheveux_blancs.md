@@ -1,6 +1,6 @@
 ---
 title: Les cheveux blancs
-date: '2020-01-01'
+date: '2020-10-01'
 ---
 Travail de mémoire et d'enquête sur la situation des anciens travailleurs immigrés dans la région des
 Hauts de France. Ces anciens ont immigré en France dans les années 60 pour pallier le manque de

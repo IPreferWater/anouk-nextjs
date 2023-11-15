@@ -1,6 +1,6 @@
 ---
 title: Les poings ouverts
-date: '2020-08-01'
+date: '2020-09-01'
 ---
 À l’hôpital, une grande partie des entrées de patients se fait la nuit.
 Le soleil est couché, la lumière a disparu, c'est un moment très anxiogène

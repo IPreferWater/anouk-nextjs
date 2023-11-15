@@ -1,6 +1,6 @@
 ---
 title: Dans les pas de son père
-date: '2020-05-01'
+date: '2020-03-01'
 ---
 Adeline a 29 ans, elle est née dans un petit village de la Meuse. Son père était
 fermier, et lui a transmis l’amour des bêtes. Elle a toujours eu ce rêve en tête de

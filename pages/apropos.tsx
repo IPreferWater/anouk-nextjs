@@ -17,6 +17,9 @@ export default function AProposPage ({ projects } : AProposProps) {
 
     « Membre de l’agence Light Motiv, la photographie est pour moi une manière de mieux comprendre le monde qui m’entoure. Très attachée à témoigner des histoires et des combats personnels qui, bien souvent, résonnent plus largement, j’ai cette volonté forte de mettre en lumière ceux à qui on laisse trop peu la parole. C’est l’attachement au territoire de Roubaix et à chacune des personnes que je rencontre qui guide ma photographie. Ma démarche photographique se veut le plus souvent comme des immersions dans l’intime au long terme, comme un reflet des relations quotidiennes.
   </p>
+
+  <div>anoukdesury@gmail.com / anouk@lightmotiv.com
++33665236565</div>
 </div>
   </Layout>)
 }

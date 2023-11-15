@@ -1,6 +1,6 @@
 ---
 title: L'école ferme ses portes
-date: '2020-09-01'
+date: '2020-05-01'
 ---
 Le jeudi 12 mars 2020, le Président de la République française annonce que les écoles ne rouvriront
 pas et que le confinement débutera le lendemain.
