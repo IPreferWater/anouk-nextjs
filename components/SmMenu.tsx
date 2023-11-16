@@ -34,7 +34,7 @@ return <div>
       >
         <Menu.Items className="absolute right-0 z-10 mt-2 w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none p-2">
           <div className="py-1">
-            <h2 className='font-bold'>Projets</h2>
+            <h2 className='font-bold'>PROJETS</h2>
           {
  projects.map((project: IProjectIndexLeftMenu,i: number) => {
   return            <Menu.Item key={`${i}-${project.id}`}>
@@ -60,9 +60,9 @@ return <div>
           </div>
 
           <Link
-    href={`/contact`}
+    href={`/apropos`}
     className='font-bold'>
-      Contact
+      A PROPOS
     </Link>
 
         </Menu.Items>
