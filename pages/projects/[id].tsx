@@ -14,7 +14,7 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
           <div className='text-center font-courier text-[21px] bold lg:right-0 lg:mr-6 lg:fixed mb-8 lg:top-[70px]'>{project.title}</div>
         <div className='flex flex-col lg:flex-row'>
           {<div>
-        <div className='text-[13.5px] m-auto  w-[20rem] lg:mr-2 prose prose-xl font-courier prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 text-left prose:font-courier' dangerouslySetInnerHTML={{__html:project.body}}/>
+        <div className='text-justify lg:text-left text-[13.5px] mx-20 lg:mx-0 lg:w-[14rem] lg:mr-2 prose prose-xl font-courier prose-a:underline prose-a:decoration-orange-500 prose-a:decoration-2 text-left prose:font-courier' dangerouslySetInnerHTML={{__html:project.body}}/>
           </div>}
 
         {project.imgs.map(img => (

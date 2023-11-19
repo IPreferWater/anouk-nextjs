@@ -9,7 +9,7 @@ type LeftMenuProps = {
 export const LeftMenu = ( {projects} :LeftMenuProps) => {
   const [projectVisibility, setProjectVisibility] = useState(false)
 
-return <div className='flex flex-col gap-y-4 font-courier text-menu min-w-[220px] max-w-[220px]  ml-6 mr-2'>
+return <div className='flex flex-col gap-y-4 font-courier text-menu min-w-[220px] max-w-[220px]  ml-16 mr-2'>
       <div className='flex flex row' onClick={() => setProjectVisibility(!projectVisibility)}>
 
       <h1 className='font-black mr-2' >PROJETS</h1>
