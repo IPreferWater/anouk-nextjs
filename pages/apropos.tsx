@@ -12,7 +12,7 @@ export default function AProposPage ({ projects } : AProposProps) {
   return (<Layout title="Anouk Desury"  metaName = "à propos" metaDescription="Présentation de Clémentine, couturiere, animatrice d'atelier et directrice de Clementinestla" projects={projects}>
 <div className='m-auto w-3/4 text-justify font-courier'>
 <h1 className='text-8xl font-bold mb-4'>A propos</h1>
-<div className='flex flex-col lg:flex-row gap-x-8'>
+<div className='flex flex-col ad:flex-row gap-x-8'>
 <img className="mb-8 object-contain object-top" src="anouk_a_propos.webp" alt="photo profil anouk desury"/>
 
   <p className='text-lg leading-7'>
