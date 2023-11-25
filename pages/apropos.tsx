@@ -24,6 +24,7 @@ export default function AProposPage ({ projects } : AProposProps) {
     <div className='flex flex-col my-6 gap-y-4 text-blue-500'>
     <a href="mailto:anoukdesury@gmail.com">anoukdesury@gmail.com</a>
     <a href="mailto:anouk@lightmotiv.com">anouk@lightmotiv.com</a>
+    <a href="https://www.instagram.com/anoukdesury" target="_blank">instagram</a>
     <a href="tel:+33665236565">+33665236565</a>
 
       <div></div>
