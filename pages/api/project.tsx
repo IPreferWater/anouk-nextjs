@@ -1,7 +1,7 @@
 import fs from 'fs'
 import path from 'path'
 import matter from 'gray-matter'
-import { IImg, IProject, IProjectIndexLeftMenu, ITemp } from '@/interfaces/index'
+import { IImg, IPresse, IProject, IProjectIndexLeftMenu, ITemp } from '@/interfaces/index'
 import {unified} from 'unified'
 import remarkParse from 'remark-parse'
 import remarkHtml from 'remark-html'
@@ -9,6 +9,16 @@ import remarkHtml from 'remark-html'
 const projectsDirectory = path.join(process.cwd(), 'data/_projects')
 const projectsImgsDirectory = path.join(process.cwd(), 'public/projects')
 const SEPARATOR = "_"
+
+export function getPresse(): IPresse{
+
+
+    const fileNames = fs.readdirSync("public/presse")
+
+    return {
+      imgs: fileNamesToImg(fileNames)
+  } as IProject
+}
 
 export function getAllProjectsTitleSortedByDate(): IProjectIndexLeftMenu[]{
     const temp = [] as ITemp[]

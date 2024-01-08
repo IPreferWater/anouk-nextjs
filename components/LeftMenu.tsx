@@ -32,6 +32,10 @@ return <div className='flex flex-col gap-y-4 font-courier text-menu min-w-[220px
     <Link href={`/apropos`} className='font-bold'>
       A PROPOS
     </Link>
+
+    <Link href={`/presse`} className='font-bold'>
+      PRESSE
+    </Link>
   </div>
 
 }

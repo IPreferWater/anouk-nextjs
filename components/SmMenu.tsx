@@ -65,6 +65,12 @@ return <div>
       A PROPOS
     </Link>
 
+    <Link
+    href={`/presse`}
+    className='font-bold'>
+      PRESSE
+    </Link>
+
         </Menu.Items>
       </Transition>
     </Menu>
