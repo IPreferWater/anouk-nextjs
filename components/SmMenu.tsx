@@ -49,28 +49,26 @@ return <div>
 
 
 </Menu.Item>
-
-
-
-
-
 })}
+ {/* TODO should be better to work on all div once => Wrap "A PROPOS" and "PRESSE" in a separate div */}
+ <div className='flex flex-col'>
 
+                <Menu.Item>
+                  <Link href={`/presse`} className='font-bold'>
+                    PRESSE
+                  </Link>
+                </Menu.Item>
+
+                <Menu.Item>
+                  <Link href={`/apropos`} className='font-bold'>
+                    A PROPOS
+                  </Link>
+                </Menu.Item>
+
+
+              </div>
 
           </div>
-
-          <Link
-    href={`/apropos`}
-    className='font-bold'>
-      A PROPOS
-    </Link>
-
-    <Link
-    href={`/presse`}
-    className='font-bold'>
-      PRESSE
-    </Link>
-
         </Menu.Items>
       </Transition>
     </Menu>

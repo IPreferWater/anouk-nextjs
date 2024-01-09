@@ -28,14 +28,20 @@ return <div className='flex flex-col gap-y-4 font-courier text-menu min-w-[220px
     )) : null}
     </div>
 
+    <Link href={`/presse`} className='font-bold'>
+      PRESSE
+    </Link>
 
     <Link href={`/apropos`} className='font-bold'>
       A PROPOS
     </Link>
 
-    <Link href={`/presse`} className='font-bold'>
-      PRESSE
+    <Link href={`https://www.instagram.com/clementinestla/?hl=fr`} target='_blank' className='font-bold'>
+    <img className='object-contain h-10' src="/icon_instagram.svg" alt="icon redirection instagram"/>
     </Link>
+
+  
+
   </div>
 
 }
