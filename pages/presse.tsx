@@ -19,7 +19,7 @@ export default function PressePage ({ presse, allProjects } : PresseProps) {
          <img
          key = {img.path}
          src= {`/presse/${img.path}`}
-         className="max-h-[600px] my-4 ad:mx-2 ad:my-0 object-contain"
+         className="img-anouk-display"
          alt={img.alt}
        />
 
