@@ -36,7 +36,7 @@ return <div className='flex flex-col gap-y-4 font-courier text-menu min-w-[220px
       A PROPOS
     </Link>
 
-    <Link href={`https://www.instagram.com/clementinestla/?hl=fr`} target='_blank' className='font-bold'>
+    <Link href={`https://www.instagram.com/anoukdesury/`} target='_blank' className='font-bold'>
     <img className='object-contain h-10' src="/icon_instagram.svg" alt="icon redirection instagram"/>
     </Link>
 

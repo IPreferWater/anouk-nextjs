@@ -12,11 +12,16 @@ type SmMenuProps = {
 
 export const SmMenu = ( {projects} :SmMenuProps) => {
 
-return <div>
+return <div className='flex flex-row  items-center space-x-2'>
 
+<Link  href={`https://www.instagram.com/anoukdesury/`} target='_blank' className='font-bold'>
+    <img className='object-contain h-8' src="/icon_instagram.svg" alt="icon redirection instagram"/>
+    </Link>
 
 <Menu as="div" className="relative inline-block text-left font-courier">
       <div>
+
+
         <Menu.Button className="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold shadow-sm   hover:bg-gray-50">
 
         <img className='object-contain h-10' src="/icon_menu_sm.svg" alt="icon pour menu sur smartphone"/>
