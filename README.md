@@ -5,7 +5,9 @@ The code is the property of Anouk Desury
 website for Anouk Desury, photographer from Roubaix
 
 # 1.1
-add a presse page
+- add a presse page
+- add instagram icon
+- set website description
 
 ## to transform jpg to webp
 `for file in ./*.jpg; do cwebp -q 100 "$file" -o "${file%.*}.webp"; done`
