@@ -56,7 +56,7 @@ return <div className='flex flex-row  items-center space-x-2'>
 </Menu.Item>
 })}
  {/* TODO should be better to work on all div once => Wrap "A PROPOS" and "PRESSE" in a separate div */}
- <div className='flex flex-col'>
+ <div className='flex flex-col gap-y-4 mt-4'>
 
                 <Menu.Item>
                   <Link href={`/presse`} className='font-bold'>
