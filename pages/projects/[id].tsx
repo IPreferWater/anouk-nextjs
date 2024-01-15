@@ -22,7 +22,7 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
              <img
              key = {img.path}
              src= {`/projects/${project.id}/${img.path}`}
-             className="max-h-[600px] my-4 ad:mx-2 ad:my-0 object-contain"
+             className="img-anouk-display"
              alt={img.alt}
            />
 

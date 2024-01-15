@@ -20,6 +20,7 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
     <Head>
       <title>{title}</title>
       <meta charSet="utf-8" />
+      <meta name="description" content="Anouk Desury, photographe de reportage sociale et documentaire basée à Roubaix." />
       <link rel="shortcut icon" href="favicon.gif" />
     </Head>
     <header className='mb-4'>

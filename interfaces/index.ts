@@ -21,3 +21,7 @@ export type IImg = {
   path: string
   order : number
 }
+
+export type IPresse = {
+  imgs: Array<IImg>
+}

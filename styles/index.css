@@ -19,3 +19,10 @@
   font-weight: 400;
   font-display: swap;
 }
+
+
+@layer components {
+  .img-anouk-display {
+    @apply  max-h-[600px] my-4 ad:mx-2 ad:my-0 object-contain
+  }
+}
