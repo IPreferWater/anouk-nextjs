@@ -22,9 +22,8 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
       <meta charSet="utf-8" />
       <meta name="description" content="Anouk Desury, photographe de reportage sociale et documentaire basée à Roubaix." />
       <link rel="shortcut icon" href="favicon.gif" />
-    </Head>
-    <header className='mb-4'>
-    <meta name="viewport" content="initial-scale=1.0, width=device-width" />
+
+      <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name={metaName} content={metaDescription}/>
 
     <meta property="og:title" content="todo" />
@@ -33,6 +32,9 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
     <meta property="og:image" content="https://www.anoukdesury.com/projects/les_cheveux_blancs/Les%20cheveux%20blancs%20Anouk%20Desury_10.webp" />
     <meta property="og:image:width" content="640" />
     <meta property="og:image:height" content="442" />
+    </Head>
+    <header className='mb-4'>
+
 
     <div className='flex flex-row justify-between'>
       <Link className='m-6 ml-16  font-skeina text-[30px]' href="/">
