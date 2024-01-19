@@ -26,6 +26,14 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
     <header className='mb-4'>
     <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name={metaName} content={metaDescription}/>
+
+    <meta property="og:title" content="todo" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://www.anoukdesury.com" />
+    <meta property="og:image" content="https://www.anoukdesury.com/projects/les_cheveux_blancs/Les%20cheveux%20blancs%20Anouk%20Desury_10.webp" />
+    <meta property="og:image:width" content="640" />
+    <meta property="og:image:height" content="442" />
+
     <div className='flex flex-row justify-between'>
       <Link className='m-6 ml-16  font-skeina text-[30px]' href="/">
           <div className=''>Anouk Desury</div>
