@@ -29,6 +29,7 @@ export const Layout = ({ children, title, metaName, metaDescription, projects, o
     <meta name={metaName} content={metaDescription}/>
 
     <meta property="og:title" content={ogTitle} />
+    <meta property="og:description" content={ogTitle}/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.anoukdesury.com" />
     <meta property="og:image" content={ogImg} />
