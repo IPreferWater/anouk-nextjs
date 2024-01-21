@@ -1,6 +1,5 @@
-import Link from 'next/link'
 import {Layout} from '@/components/Layout'
-import { getAllProjectsTitleSortedByDate, getPresse } from '@/api/project'
+import { getAllProjectsTitleSortedByDate, getFirstImagePathOfProject, getPresse } from '@/api/project'
 import { IPresse, IProjectIndexLeftMenu } from '@/interfaces/index'
 
 type PresseProps = {
@@ -10,8 +9,8 @@ type PresseProps = {
 
 export default function PressePage ({ presse, allProjects } : PresseProps) {
 
-  return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects}>
-  <div className='overflow-x-auto'>      
+  return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={`/presse/${presse.imgs[0].path}`} ogTitle='Presse Anouk Desury'>
+  <div className='overflow-x-auto'>
     <div className='flex flex-col ad:flex-row'>
 
     {presse.imgs.map(img => (

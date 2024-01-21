@@ -6,15 +6,17 @@ import {SmMenu} from '@/components/SmMenu'
 import 'tailwindcss/tailwind.css'
 import { IProjectIndexLeftMenu } from '../interfaces'
 
-type Props = {
+type LayoutProps = {
   children?: ReactNode
   title: string
   metaName: string,
   metaDescription: string,
   projects: Array<IProjectIndexLeftMenu>
+  ogImg: string,
+  ogTitle: string
 }
 
-export const Layout = ({ children, title, metaName, metaDescription, projects}: Props) => {
+export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle}: LayoutProps) => {
 
   return <div>
     <Head>
@@ -26,10 +28,10 @@ export const Layout = ({ children, title, metaName, metaDescription, projects}: 
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
     <meta name={metaName} content={metaDescription}/>
 
-    <meta property="og:title" content="todo" />
+    <meta property="og:title" content={ogTitle} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.anoukdesury.com" />
-    <meta property="og:image" content="https://www.anoukdesury.com/projects/les_cheveux_blancs/Les%20cheveux%20blancs%20Anouk%20Desury_10.webp" />
+    <meta property="og:image" content={ogImg} />
     <meta property="og:image:width" content="640" />
     <meta property="og:image:height" content="442" />
     </Head>

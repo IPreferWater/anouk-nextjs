@@ -101,3 +101,10 @@ export function getAllProjectsIds() {
     return maped.sort((objA, objB) => objA.order - objB.order);
   }
 
+  export function getFirstImagePathOfProject(project:IProject): string {
+    const imgs = project.imgs
+    if ( imgs.length<=0 ){
+      return ''
+    }
+    return `/projects/${project.id}/${imgs[0].path}`
+  }
