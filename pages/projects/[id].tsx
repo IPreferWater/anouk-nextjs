@@ -16,7 +16,7 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
     return `/projects/${project.id}/${imgs[0].path}`
   }
 
-    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={getFirstImagePathOfProject(project.imgs)} ogTitle={project.title}>
+    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={getFirstImagePathOfProject(project.imgs)} ogTitle={project.title} ogDescription={project.body.substring(0, 300)}>
       <div className='overflow-x-auto'>
           <div className='text-center font-courier text-[21px] bold ad:right-0 ad:mr-6 ad:fixed mb-8 ad:top-[70px]'>{project.title}</div>
         <div className='flex flex-col ad:flex-row'>

@@ -14,9 +14,10 @@ type LayoutProps = {
   projects: Array<IProjectIndexLeftMenu>
   ogImg: string,
   ogTitle: string
+  ogDescription: string
 }
 
-export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle}: LayoutProps) => {
+export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle, ogDescription}: LayoutProps) => {
 
   return <div>
     <Head>
@@ -29,7 +30,7 @@ export const Layout = ({ children, title, metaName, metaDescription, projects, o
     <meta name={metaName} content={metaDescription}/>
 
     <meta property="og:title" content={ogTitle} />
-    <meta property="og:description" content={ogTitle}/>
+    <meta property="og:description" content={ogDescription}/>
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://www.anoukdesury.com" />
     <meta property="og:image" content={ogImg} />

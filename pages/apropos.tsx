@@ -9,7 +9,7 @@ type AProposProps = {
 
 export default function AProposPage ({ projects } : AProposProps) {
 
-  return (<Layout title="Anouk Desury"  metaName = "à propos" metaDescription="Présentation d'Anouk Desury Photographe à Roubaix" projects={projects} ogImg='anouk_a_propos.webp' ogTitle='Anouk Desury photographe Roubaix'>
+  return (<Layout title="Anouk Desury"  metaName = "à propos" metaDescription="Présentation d'Anouk Desury Photographe à Roubaix" projects={projects} ogImg='anouk_a_propos.webp' ogTitle='Anouk Desury photographe Roubaix' ogDescription='page A Propos'>
 <div className='m-auto w-3/4 text-justify font-courier'>
 <h1 className='text-8xl font-bold mb-4'>A propos</h1>
 <div className='flex flex-col ad:flex-row gap-x-8'>
