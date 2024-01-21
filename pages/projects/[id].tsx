@@ -1,6 +1,6 @@
-import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID, getFirstImagePathOfProject } from '@/api/project'
+import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID} from '@/api/project'
 import {Layout} from '../../components/Layout'
-import { IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
+import { IImg, IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
 
 
 type ProjectProps = {
@@ -9,7 +9,14 @@ type ProjectProps = {
 }
 export default function ProjectPage({project, allProjects}:ProjectProps) {
 
-    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={getFirstImagePathOfProject(project)} ogTitle={project.title}>
+  function getFirstImagePathOfProject(imgs:IImg[]): string {
+    if ( imgs.length<=0 ){
+      return ''
+    }
+    return `/projects/${project.id}/${imgs[0].path}`
+  }
+
+    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={getFirstImagePathOfProject(project.imgs)} ogTitle={project.title}>
       <div className='overflow-x-auto'>
           <div className='text-center font-courier text-[21px] bold ad:right-0 ad:mr-6 ad:fixed mb-8 ad:top-[70px]'>{project.title}</div>
         <div className='flex flex-col ad:flex-row'>
