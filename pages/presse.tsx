@@ -1,5 +1,5 @@
 import {Layout} from '@/components/Layout'
-import { getAllProjectsTitleSortedByDate, getFirstImagePathOfProject, getPresse } from '@/api/project'
+import { getAllProjectsTitleSortedByDate, getPresse } from '@/api/project'
 import { IPresse, IProjectIndexLeftMenu } from '@/interfaces/index'
 
 type PresseProps = {
