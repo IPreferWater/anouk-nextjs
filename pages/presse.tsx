@@ -9,7 +9,7 @@ type PresseProps = {
 
 export default function PressePage ({ presse, allProjects } : PresseProps) {
 
-  return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={`/presse/${presse.imgs[0].path}`} ogTitle='Presse Anouk Desury' ogDescription='page Presse'>
+  return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={`/presse/${presse.imgs[0].path}`} ogTitle='Anouk Desury réalise des commandes pour la presse nationale et y publie ses reportages.' ogDescription='page Presse'>
   <div className='overflow-x-auto'>
     <div className='flex flex-col ad:flex-row'>
 
