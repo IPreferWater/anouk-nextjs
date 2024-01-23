@@ -100,4 +100,3 @@ export function getAllProjectsIds() {
 
     return maped.sort((objA, objB) => objA.order - objB.order);
   }
-

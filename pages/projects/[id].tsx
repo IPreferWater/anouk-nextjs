@@ -1,6 +1,6 @@
-import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID } from '@/api/project'
+import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID} from '@/api/project'
 import {Layout} from '../../components/Layout'
-import { IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
+import { IImg, IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
 
 
 type ProjectProps = {
@@ -9,7 +9,15 @@ type ProjectProps = {
 }
 export default function ProjectPage({project, allProjects}:ProjectProps) {
 
-    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects}>
+  function getFirstImagePathOfProject(imgs:IImg[]): string {
+    if ( imgs.length<=0 ){
+      return ''
+    }
+    return `/projects/${project.id}/${imgs[0].path}`
+  }
+
+  {/* og:description will be the description displayed in social-network with links, as the body is already in html format we skip the 3 firsts character and take the maximum size allowed 300 characters*/}
+    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={getFirstImagePathOfProject(project.imgs)} ogTitle={project.title} ogDescription={project.body.substring(3, 300)}>
       <div className='overflow-x-auto'>
           <div className='text-center font-courier text-[21px] bold ad:right-0 ad:mr-6 ad:fixed mb-8 ad:top-[70px]'>{project.title}</div>
         <div className='flex flex-col ad:flex-row'>

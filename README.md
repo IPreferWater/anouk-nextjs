@@ -9,6 +9,9 @@ website for Anouk Desury, photographer from Roubaix
 - add instagram icon
 - set website description
 
+# 1.1.1
+- add open-graph meta balise for better link preview in social-network
+
 ## to transform jpg to webp
 `for file in ./*.jpg; do cwebp -q 100 "$file" -o "${file%.*}.webp"; done`
 `for file in ./*.jpg; do rm "$file"; done`
