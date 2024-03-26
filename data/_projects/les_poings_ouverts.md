@@ -2,10 +2,4 @@
 title: Les poings ouverts
 date: '2020-09-01'
 ---
-À l’hôpital, une grande partie des entrées de patients se fait la nuit.
-Le soleil est couché, la lumière a disparu, c'est un moment très anxiogène
-lorsqu’on est malade. On se retrouve seul face à l'obscurité et à la maladie, avec la
-désagréable impression que les symptômes s’aggravent. Récit d’une nuit passée
-dans une unité dédiée au Covid avec les six soignantes de nuit qui ne se
-connaissaient pas avant l’épidémie. de garde. Les imprévus se succéderont, mais
-avec sang-froid et douceur, elles feront face.
+Ils·elle ont entre 13 et 24 ans, habitent Roubaix et ont choisi la boxe pour briller. Loin d’être un sport anodin, la boxe demande un engagement du corps et de l’âme. En retour, elle leur apporte bien plus que tout autre éducation, à commencer par la confiance en soi. Au delà du ring, ces images dépeignent les heures d’entraînement, la persévérance dans les épreuves, les aspirations et les combats d'une nouvelle génération : vivre seul loin des siens, devenir une meilleure version de soi même, trouver sa voie ou apaiser des rancœurs profondes.
