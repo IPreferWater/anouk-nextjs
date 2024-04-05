@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 type LeftMenuProps = {
   projects: IProjectIndexLeftMenu[]
-  projectVisibilityFromProps: boolean | null
+  projectVisibilityFromProps: boolean
 }
 
 export const LeftMenu = ({ projects, projectVisibilityFromProps }: LeftMenuProps) => {

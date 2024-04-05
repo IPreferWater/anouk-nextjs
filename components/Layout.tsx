@@ -15,7 +15,7 @@ type LayoutProps = {
   ogImg: string
   ogTitle: string
   ogDescription: string
-  projectVisibility: boolean | null
+  projectVisibility: boolean
 }
 
 export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle, ogDescription, projectVisibility }: LayoutProps) => {
