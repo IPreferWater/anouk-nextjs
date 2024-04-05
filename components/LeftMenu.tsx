@@ -4,10 +4,11 @@ import Link from 'next/link'
 
 type LeftMenuProps = {
   projects: IProjectIndexLeftMenu[]
+  projectVisibilityFromProps: boolean | null
   }
 
-export const LeftMenu = ( {projects} :LeftMenuProps) => {
-  const [projectVisibility, setProjectVisibility] = useState(false)
+export const LeftMenu = ( {projects,projectVisibilityFromProps} :LeftMenuProps) => {
+  const [projectVisibility, setProjectVisibility] = useState(projectVisibilityFromProps)
 
 return <div className='flex flex-col gap-y-4 font-courier text-menu min-w-[220px] max-w-[220px]  ml-16 mr-2'>
       <div className='flex flex row' onClick={() => setProjectVisibility(!projectVisibility)}>

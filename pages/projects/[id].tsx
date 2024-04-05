@@ -17,7 +17,14 @@ export default function ProjectPage({project, allProjects}:ProjectProps) {
   }
 
   {/* og:description will be the description displayed in social-network with links, as the body is already in html format we skip the 3 firsts character and take the maximum size allowed 300 characters*/}
-    return (<Layout title="Anouk Desury Projet" metaName = "Projet photo" metaDescription="Presentation et photos du projet d'Anouk Desury" projects={allProjects} ogImg={getFirstImagePathOfProject(project.imgs)} ogTitle={project.title} ogDescription={project.body.substring(3, 300)}>
+    return (<Layout
+    title="Anouk Desury Projet"
+    metaName = "Projet photo"
+    metaDescription="Presentation et photos du projet d'Anouk Desury"
+    projects={allProjects} ogImg={getFirstImagePathOfProject(project.imgs)}
+    ogTitle={project.title}
+    ogDescription={project.body.substring(3, 300)}
+    projectVisibility={true}>
 
           <div className='text-center font-courier text-[21px] ad:text-right bold ad:mr-6'>{project.title}</div>
           <div className='overflow-x-auto'>

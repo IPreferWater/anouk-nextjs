@@ -9,15 +9,16 @@ import { IProjectIndexLeftMenu } from '../interfaces'
 type LayoutProps = {
   children?: ReactNode
   title: string
-  metaName: string,
-  metaDescription: string,
+  metaName: string
+  metaDescription: string
   projects: Array<IProjectIndexLeftMenu>
-  ogImg: string,
+  ogImg: string
   ogTitle: string
   ogDescription: string
+  projectVisibility: boolean | null
 }
 
-export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle, ogDescription}: LayoutProps) => {
+export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle, ogDescription, projectVisibility}: LayoutProps) => {
 
   return <div>
     <Head>
@@ -32,7 +33,7 @@ export const Layout = ({ children, title, metaName, metaDescription, projects, o
     <meta property="og:title" content={ogTitle} />
     <meta property="og:description" content={ogDescription}/>
     <meta property="og:type" content="website" />
-    
+
     <meta property="og:image" content={ogImg} />
     <meta property="og:image:width" content="640" />
     <meta property="og:image:height" content="442" />
@@ -53,7 +54,7 @@ export const Layout = ({ children, title, metaName, metaDescription, projects, o
     </div>
 
     <div className='hidden ad:flex flex-row'>
-      <LeftMenu projects={projects}/>
+      <LeftMenu projects={projects} projectVisibilityFromProps={projectVisibility}/>
       <div className='ml-6'>{children}</div>
     </div>
 
