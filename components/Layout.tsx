@@ -29,14 +29,13 @@ export const Layout = ({ children, title, metaName, metaDescription, projects, o
 
       <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       <meta name={metaName} content={metaDescription} />
-
       <meta property="og:title" content={ogTitle} />
       <meta property="og:description" content={ogDescription} />
       <meta property="og:type" content="website" />
-
       <meta property="og:image" content={ogImg} />
       <meta property="og:image:width" content="640" />
       <meta property="og:image:height" content="442" />
+
     </Head>
     <header className='mb-4'>
 
