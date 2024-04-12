@@ -6,7 +6,7 @@ type SitemapProps = {
   projects: IProject[]
 }
 
-export default function Sitemap({ projects }: SitemapProps) {
+export default function SitemapGenerator({ projects }: SitemapProps) {
     const EXTERNAL_DATA_URL = 'https://www.anoukdesury.com/projects';
 
     //https://www.sitemaps.org/protocol.html
