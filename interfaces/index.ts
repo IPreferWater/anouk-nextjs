@@ -12,6 +12,7 @@ export type ITemp = {
 export type IProject = {
   id: string
   title: string
+  date: Date
   body: string
   imgs: Array<IImg>
 }
