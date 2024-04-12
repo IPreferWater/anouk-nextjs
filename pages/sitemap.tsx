@@ -1,12 +1,11 @@
-import { Layout } from '@/components/Layout'
-import { IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
-import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID } from '@/api/project'
+import { IProject } from '@/interfaces/index'
+import { getAllProjectsIds, getProjectByID } from '@/api/project'
 
 type SitemapProps = {
   projects: IProject[]
 }
 
-export default function SitemapGenerator({ projects }: SitemapProps) {
+export default function Sitemap({ projects }: SitemapProps) {
     const EXTERNAL_DATA_URL = 'https://www.anoukdesury.com/projects';
 
     //https://www.sitemaps.org/protocol.html
@@ -18,7 +17,6 @@ export default function SitemapGenerator({ projects }: SitemapProps) {
         <loc>https://www.anoukdesury.com</loc>
         <lastmod>2024-01-01</lastmod>
         <changefreq>yearly</changefreq>
-        <priority> </priority>
       </url>
       <url>
         <loc>https://www.anoukdesury.com/presse</loc>
