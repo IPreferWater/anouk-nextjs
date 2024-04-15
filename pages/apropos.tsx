@@ -1,13 +1,21 @@
-import Link from 'next/link'
 import { Layout } from '@/components/Layout'
 import { getAllProjectsTitleSortedByDate } from '@/api/project'
 import { IProjectIndexLeftMenu } from '@/interfaces/index'
+import { Graph } from 'schema-dts'
+import { PersonAnoukDesury } from '@/interfaces/PersonAnoukDesury'
+import Script from 'next/script'
 
 type AProposProps = {
   projects: IProjectIndexLeftMenu[]
 }
 
 export default function AProposPage({ projects }: AProposProps) {
+
+  const jsonLd: Graph = {
+    "@context": "https://schema.org",
+    "@graph": 
+    [ PersonAnoukDesury ]
+  }
 
   return (<Layout
     title="Anouk Desury"
@@ -16,7 +24,9 @@ export default function AProposPage({ projects }: AProposProps) {
     projects={projects} ogImg='anouk_a_propos.webp'
     ogTitle='Anouk Desury photographe Roubaix'
     ogDescription='Anouk Desury, photographe de reportage social et documentaire basée à Roubaix. Photographe de 28 ans, Anouk Desury découvre Roubaix lorsqu’elle y passe son BTS Photographie puis poursuit ses études avec un DU en Photographie ...'
-    projectVisibility={false}>
+    projectVisibility={false}
+    jsonLd={jsonLd}>
+    
     <div className='m-auto w-3/4 text-justify font-courier'>
       <h1 className='text-8xl font-bold mb-4'>A propos</h1>
       <div className='flex flex-col ad:flex-row gap-x-8'>

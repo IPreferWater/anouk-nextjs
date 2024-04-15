@@ -17,8 +17,9 @@ export const OfferCatalogAnoukDesury: OfferCatalog = {
             category: 'reportage documentaire social',
             description: "Photographie sur le coté social",            
             isFamilyFriendly: true,
-            name: "Reportage Photo",            
-            seller: PersonAnoukDesury
+            name: "Reportage Photo",    
+            // cant set this seller, it make an infinite loop        
+           // seller: PersonAnoukDesury
           }
         ]
       }      
