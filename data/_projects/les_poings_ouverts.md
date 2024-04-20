@@ -8,7 +8,8 @@ ld-date-created: '2022-01-01'
 ld-date-published: '2022-01-01'
 ld-genre: social sport
 ld-headline: le sport pour tous
-ld-keywords: reportage ld-material: documentaire boxe roubaix
+ld-keywords: reportage social boxe roubaix
+ld-material: matos
 ld-age-range: 7-77
 
 lg-result: mise en lumiere de ....

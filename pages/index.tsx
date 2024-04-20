@@ -39,7 +39,8 @@ const PlaceRoubaix: Place = {
     ogImg='/projects/les_poings_ouverts/Les poings ouverts Anouk Desury_190.webp'
     ogTitle='Anouk Desury photographe Roubaix'
     ogDescription='Anouk Desury, photographe de reportage social et documentaire basée à Roubaix.'
-    projectVisibility={false}>
+    projectVisibility={false}
+    jsonLd={[]}>
 
     <div>
       <img className='object-contain ad:flex ad:ml-56 h-screen ad:h-[600px]' src='/projects/les_poings_ouverts/Les poings ouverts Anouk Desury_190.webp' alt='photo de profil d Anouck Desury' />
