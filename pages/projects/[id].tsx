@@ -22,22 +22,23 @@ export default function ProjectPage({ project, allProjects, ld }: ProjectProps) 
     //action
     actionStatus: 'https://schema.org/CompletedActionStatus',
     agent: PersonAnoukDesury,
-    endTime: ld.datePublished,
-    instrument: ld.material,
-    location: getPlaceFromID(ld.placeID),
-    object: ld.about,
-    result: ld.result,
-    startTime : ld.dateCreated,
+    //endTime: ld.datePublished,
+    //instrument: ld.material,
+    //location: getPlaceFromID(ld.placeID),
+    location: getPlaceFromID("todo"),
+    //object: ld.about,
+    //result: ld.result,
+    //startTime : ld.dateCreated,
     target: getProjectUrl(),
 
     // thing
-    additionalType: ld.keywords,
+    //additionalType: ld.keywords,
     alternateName: title,
-    description: ld.about,
+    //description: ld.about,
     image: getUrlFirstImg(),
     mainEntityOfPage: getProjectUrl(),
     name: title,
-    sameAs: ld.sameUrl,
+    //sameAs: ld.sameUrl,
     url : getProjectUrl(),
   }
   
