@@ -1,7 +1,5 @@
-import { Layout } from '@/components/Layout'
-import { IProject, IProjectIndexLeftMenu } from '@/interfaces/index'
-import { getAllProjectsIds, getAllProjectsTitleSortedByDate, getProjectByID } from '@/api/project'
 import { IProject } from '@/interfaces/index'
+import { getAllProjectsIds, getProjectByID } from '@/api/project'
 
 type SitemapProps = {
   projects: IProject[]
