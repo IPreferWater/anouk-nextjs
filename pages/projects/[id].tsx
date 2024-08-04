@@ -44,32 +44,34 @@ export default function ProjectPage({ project, allProjects, ld }: ProjectProps) 
   
   const photograph: Photograph = {
     '@type': 'Photograph',
-    about: ld.about,
+    //about: ld.about,
     accountablePerson: PersonAnoukDesury,
-    audience: ld.audience,
+    //audience: ld.audience,
     author : PersonAnoukDesury,
-    award : ld.award,
-    contentLocation :  getPlaceFromID(ld.placeID),
+    //award : ld.award,
+    //contentLocation :  getPlaceFromID(ld.placeID),
+    contentLocation :  getPlaceFromID("todo"),
     copyrightHolder : PersonAnoukDesury,
     //copyrightNotice
     //copyrightYear
     creativeWorkStatus: "Published",
     creator: PersonAnoukDesury,
-    dateCreated : ld.dateCreated,
-    datePublished : ld.datePublished,
+    //dateCreated : ld.dateCreated,
+    //datePublished : ld.datePublished,
     //funder same as sponsor
-    genre: ld.genre,
-    headline: ld.headline,
+    //genre: ld.genre,
+    //headline: ld.headline,
     isFamilyFriendly : true,
-    keywords : ld.keywords,
+    //keywords : ld.keywords,
     //license A license document that applies to this content, typically indicated by URL. 
-    locationCreated: getPlaceFromID(ld.placeID),
-    material: ld.material,
+    //locationCreated: getPlaceFromID(ld.placeID),
+    locationCreated: getPlaceFromID("todo"),
+    //material: ld.material,
     //publication  	A publication event associated with the item
     spatialCoverage: PlaceWorkArea,
     //sponsor  same as funder
     text: title,
-    typicalAgeRange: ld.ageRange,
+    //typicalAgeRange: ld.ageRange,
   }
 
   function getProjectUrl() : string {
