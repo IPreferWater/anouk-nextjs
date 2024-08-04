@@ -1,6 +1,7 @@
 import { Layout } from '@/components/Layout'
 import { getAllProjectsTitleSortedByDate, getPresse } from '@/api/project'
 import { IPresse, IProjectIndexLeftMenu } from '@/interfaces/index'
+import { PersonAnoukDesury } from '@/interfaces/PersonAnoukDesury'
 
 type PresseProps = {
   presse: IPresse
@@ -17,7 +18,8 @@ export default function PressePage({ presse, allProjects }: PresseProps) {
     ogImg={`/presse/${presse.imgs[0].path}`}
     ogTitle='Anouk Desury réalise des commandes pour la presse nationale et y publie ses reportages.'
     ogDescription='page Presse'
-    projectVisibility={false}>
+    projectVisibility={false}
+    jsonLd={[PersonAnoukDesury]}>
 
     <div className='overflow-x-auto'>
       <div className='flex flex-col ad:flex-row'>
