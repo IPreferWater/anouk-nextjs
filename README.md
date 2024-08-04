@@ -19,3 +19,8 @@ website for Anouk Desury, photographer from Roubaix
 ## to transform jpg to webp
 `for file in ./*.jpg; do cwebp -q 100 "$file" -o "${file%.*}.webp"; done`
 `for file in ./*.jpg; do rm "$file"; done`
+
+
+# todo
+- img index responsive
+- add title for index + open first time the projects
