@@ -5,6 +5,7 @@ import { LeftMenu } from '@/components/LeftMenu'
 import { SmMenu } from '@/components/SmMenu'
 import 'tailwindcss/tailwind.css'
 import { IProjectIndexLeftMenu } from '../interfaces'
+import { Graph, Thing } from 'schema-dts'
 
 type LayoutProps = {
   children?: ReactNode
@@ -16,9 +17,15 @@ type LayoutProps = {
   ogTitle: string
   ogDescription: string
   projectVisibility: boolean
+  jsonLd: Array<Thing>
 }
 
-export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle, ogDescription, projectVisibility }: LayoutProps) => {
+export const Layout = ({ children, title, metaName, metaDescription, projects, ogImg, ogTitle, ogDescription, projectVisibility, jsonLd }: LayoutProps) => {
+
+  const jsonLdGraph: Graph = {
+    "@context": "https://schema.org",
+    "@graph": jsonLd
+  }
 
   return <div>
     <Head>
@@ -35,6 +42,11 @@ export const Layout = ({ children, title, metaName, metaDescription, projects, o
       <meta property="og:image" content={ogImg} />
       <meta property="og:image:width" content="640" />
       <meta property="og:image:height" content="442" />
+
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLdGraph) }}
+      />
 
     </Head>
     <header className='mb-4'>
