@@ -52,7 +52,7 @@ export const Layout = ({ children, title, metaName, metaDescription, projects, o
     <header className='mb-4'>
 
 
-      <div className='flex flex-row justify-between'>
+      <div translate="no" className='flex flex-row justify-between'>
         <Link className='m-6 ml-16  font-skeina text-[30px]' href="/">
           Anouk Desury
         </Link>
