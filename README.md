@@ -20,7 +20,10 @@ website for Anouk Desury, photographer from Roubaix
 `for file in ./*.jpg; do cwebp -q 100 "$file" -o "${file%.*}.webp"; done`
 `for file in ./*.jpg; do rm "$file"; done`
 
-
-# todo
-- img index responsive
-- add title for index + open first time the projects
+## rename files
+'''
+`for file in ./*.jpg; do
+  newname=$(echo "$file" | sed 's/\.\///' | sed 's/ - /_/' | sed -E 's/_([0-9]+)\.jpg$/_\1.jpg/' | awk -F'_' '{n=split($0,a,"_"); num=a[n]; gsub(/\.jpg$/,"",num); for(i=1;i<n;i++) printf "%s_",a[i]; printf "%d.jpg\n",num+10}')
+  mv "$file" "$newname"
+done
+'''
